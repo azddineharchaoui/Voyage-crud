@@ -15,8 +15,10 @@ if ($result->num_rows > 0) {
         echo "<td class='py-3 px-4 border-b'>{$row['date_naissance']}</td>";
         echo "<td>
                 <a href=\"edit_client.php?id={$row['id_client']} \" class='px-2 py-1 rounded-lg bg-green-500 text-white'>Edit</a>
-                <a href=\"\" class='px-2 py-1 rounded-lg bg-red-500 text-white'>Delete</a>
-            </td>";
+                <form action='add.php' method='POST'>
+                    <button type=\"submit\" name=\"delete_client\" value=\"{$row['id_client']}\"class='px-2 py-1 rounded-lg bg-red-500 text-white'>Delete</a>
+                </form>
+                </td>";
         echo "</tr>";
     }
 } else {

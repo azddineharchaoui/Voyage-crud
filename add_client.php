@@ -1,9 +1,9 @@
 <!-- <?php 
 session_start();
-if(isset($_SESSION['added'])){
-    echo $_SESSION['added'];
-    unset($_SESSION['added']);
-}
+// if(isset($_SESSION['added'])){
+//     echo $_SESSION['added'];
+//     unset($_SESSION['added']);
+// }
 
 ?> -->
 <!DOCTYPE html>

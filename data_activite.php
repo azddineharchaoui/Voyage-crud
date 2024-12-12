@@ -14,6 +14,13 @@ if ($result->num_rows > 0) {
         echo "<td class='py-3 px-4 border-b'>{$row['date_debut']}</td>";
         echo "<td class='py-3 px-4 border-b'>{$row['date_fin']}</td>";
         echo "<td class='py-3 px-4 border-b'>{$row['place_disponibles']}</td>";
+        echo "<td>
+                <a href=\"edit_activite.php?id={$row['id_activite']} \" class='px-2 py-1 rounded-lg bg-green-500 text-white'>Edit</a>
+                <form action='add_a.php' method='POST'>
+                    <button type=\"submit\" name=\"delete_activite\" value=\"{$row['id_activite']}\"class='px-2 py-1 rounded-lg bg-red-500 text-white'>Delete</a>
+                </form>
+                </td>";
+        echo "</tr>";
         echo "</tr>";
     }
 } else {

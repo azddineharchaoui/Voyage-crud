@@ -8,6 +8,22 @@ if(isset($_SESSION['edited'])){
     echo $_SESSION['edited'];
     unset($_SESSION['edited']);
 }
+if(isset($_SESSION['deleted'])){
+    echo $_SESSION['deleted'];
+    unset($_SESSION['deleted']);
+}
+if(isset($_SESSION['added_a'])){
+    echo $_SESSION['added_a'];
+    unset($_SESSION['added_a']);
+}
+if(isset($_SESSION['edited_a'])){
+    echo $_SESSION['edited_a'];
+    unset($_SESSION['edited_a']);
+}
+if(isset($_SESSION['deleted_a'])){
+    echo $_SESSION['deleted_a'];
+    unset($_SESSION['deleted_a']);
+}
 ?>
 
 <!DOCTYPE html>
