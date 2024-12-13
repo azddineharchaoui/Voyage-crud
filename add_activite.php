@@ -1,9 +1,5 @@
 <?php 
 session_start();
-// if(isset($_SESSION['added_a'])){
-//     echo $_SESSION['added_a'];
-//     unset($_SESSION['added_a']);
-// }
 
 ?>
 <!DOCTYPE html>

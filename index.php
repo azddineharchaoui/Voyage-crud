@@ -24,6 +24,16 @@ if(isset($_SESSION['deleted_a'])){
     echo $_SESSION['deleted_a'];
     unset($_SESSION['deleted_a']);
 }
+
+if(isset($_SESSION['added_r'])){
+    echo $_SESSION['added_r'];
+    unset($_SESSION['added_r']);
+}
+if(isset($_SESSION['deleted_r'])){
+    echo $_SESSION['deleted_r'];
+    unset($_SESSION['deleted_r']);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -54,6 +64,8 @@ if(isset($_SESSION['deleted_a'])){
             <div class="flex justify-evenly">
                 <a class="px-2 py-1 bg-blue-500 text-white cursor-pointer rounded-lg" href="add_client.php">Ajouter client</a>
                 <a class="px-2 py-1 bg-green-500 text-white cursor-pointer rounded-lg" href="add_activite.php">Ajouter activite</a>
+                <a class="px-2 py-1 bg-yellow-500 text-white cursor-pointer rounded-lg" href="add_reservation.php">Ajouter reservation</a>
+
             </div>
         </section>
 
@@ -99,6 +111,27 @@ if(isset($_SESSION['deleted_a'])){
                     </thead>
                     <tbody id="activite-data">
                         <?php include 'data_activite.php'; ?>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="text-xl font-semibold mb-4">Liste des réservations</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white shadow-md rounded border border-gray-200">
+                    <thead class="bg-gray-200">
+                        <tr>
+                            <th class="text-left py-3 px-4">ID</th>
+                            <th class="text-left py-3 px-4">Le client</th>
+                            <th class="text-left py-3 px-4">L'activité</th>
+                            <th class="text-left py-3 px-4">Date de reservation</th>
+                            <th class="text-left py-3 px-4">Status</th>
+                            <th >actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reservation-data">
+                        <?php include 'data_reservation.php'; ?>
                     </tbody>
                 </table>
             </div>
