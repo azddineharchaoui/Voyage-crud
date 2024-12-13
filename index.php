@@ -48,12 +48,15 @@ if(isset($_SESSION['deleted_r'])){
 
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
 
-    <header class="bg-green-600 text-white py-5">
-        <div class="container mx-auto text-center">
+<header class="bg-green-600 text-white py-5">
+    <div class="container mx-auto flex items-center justify-center space-x-4">
+        <img src="./img/logo.png" alt="Logo Voyage Explore" class="w-16 h-16 rounded-full">
+        <div class="text-center">
             <h1 class="text-4xl font-bold">Voyage Explore</h1>
             <p class="mt-2">Découvrez de nouvelles destinations incroyables avec nous !</p>
         </div>
-    </header>
+    </div>
+</header>
 
     <main class="container mx-auto mt-10 px-4">
         <section class="text-center mb-10">
